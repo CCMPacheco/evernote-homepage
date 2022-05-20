@@ -296,6 +296,26 @@ footer {
   align-items: center;
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  transition: 500ms ease-in-out;
+}
+
+.sidebar button:first-child {
+  align-self: flex-end;
+}
+
 .nav-links {
   display: none;
 }
@@ -390,5 +410,9 @@ footer {
     align-items: center;
     grid-template-columns: repeat(6, auto);
     gap: 0;
+  }
+
+  .sidebar {
+    display: none;
   }
 }
