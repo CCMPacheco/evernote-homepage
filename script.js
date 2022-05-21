@@ -7,6 +7,27 @@ const languageBtn = document.querySelector("[data-language-btn]");
 const languageSelected = document.querySelector("[data-selected]");
 const languageMenu = document.querySelector("[data-language-menu]");
 const languageOption = document.querySelectorAll("[data-language-option]");
+const inputPay = document.querySelectorAll("[data-input-pay]");
+const period = document.querySelectorAll("[data-period]");
+const priceProfessional = document.querySelector("[data-price-pro]");
+const pricePersonal = document.querySelector("[data-price-per]");
+
+// Plan payment selector
+inputPay.forEach((pay) => {
+  pay.addEventListener("click", (e) => {
+    if (e.target.textContent === "Pay Yearly") {
+      pricePersonal.textContent = `ARS 2400.00 `;
+      priceProfessional.textContent = `ARS 3000.00 `;
+      period[0].textContent = `/ YEAR`;
+      period[1].textContent = `/ YEAR`;
+    } else {
+      pricePersonal.textContent = `ARS 200.00 `;
+      priceProfessional.textContent = `ARS 250.00 `;
+      period[0].textContent = `/ MONTH`;
+      period[1].textContent = `/ MONTH`;
+    }
+  });
+});
 
 // Language selector
 languageBtn.addEventListener("click", () => {
@@ -57,6 +78,10 @@ indicator.forEach((point, i) => {
 let slideTranslate = 0;
 
 function slide() {
+  if (carousel === null) {
+    return;
+  }
+
   if (slideTranslate > 3) {
     slideTranslate = 0;
   }

@@ -57,7 +57,7 @@
             class="btn-check"
             checked
           />
-          <label for="btnradio1" class="btn btn-outline-primary"
+          <label for="btnradio1" class="btn btn-outline-primary" data-input-pay
             >Pay Monthly</label
           >
           <input
@@ -66,7 +66,7 @@
             id="btnradio2"
             class="btn-check"
           />
-          <label for="btnradio2" class="btn btn-outline-primary"
+          <label for="btnradio2" class="btn btn-outline-primary" data-input-pay
             >Pay Yearly</label
           >
         </div>
@@ -120,7 +120,8 @@
             <button class="btn btn-success">&#8744;</button>
           </div>
           <p class="font-title font-bold">
-            ARS 200.00 <span class="font-regular">/ MONTH</span>
+            <span data-price-per>ARS 200.00</span
+            ><span class="font-regular" data-period>/ MONTH</span>
           </p>
           <p class="font-bold">Keep home and family on track</p>
           <ul class="d-flex flex-column gap">
@@ -178,7 +179,8 @@
             <button class="btn btn-success">&#8744;</button>
           </div>
           <p class="font-title font-bold">
-            ARS 250.00 <span class="font-regular">/ MONTH</span>
+            <span data-price-pro>ARS 250.00</span
+            ><span class="font-regular" data-period>/ MONTH</span>
           </p>
           <p class="font-bold">Tackle any project, at work or at home</p>
           <ul class="d-flex flex-column gap">
