@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <link href="styles.css" rel="stylesheet" />
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
     <title>Evernote - A simplified version</title>
   </head>
   <body>
@@ -32,7 +32,7 @@
           </a>
           <a href="./index.html" class="noto-serif font-title">Evernote</a>
         </div>
-        <button class="btn btn-light">
+        <button class="btn btn-light" data-btn-open>
           <img src="./images/menu.png" alt="Menu" class="icon menu-btn" />
         </button>
         <div class="nav-links font-small">
@@ -67,35 +67,44 @@
             alt="a phone and a laptop with evernote app opened"
             class="img-fluid"
           />
-          <div>
-            <div class="hero-info text-center">
-              <h3 class="font-large font-bold">WORK ANYWHERE</h3>
-              <p class="font-regular">
-                Keep important info handy - your notes sync automatically to all
-                your devices.
-              </p>
+
+          <div class="carousel">
+            <div class="carousel-cards" data-carousel>
+              <div class="hero-info text-center">
+                <h3 class="font-large font-bold">WORK ANYWHERE</h3>
+                <p class="font-regular">
+                  Keep important info handy - your notes sync automatically to
+                  all your devices.
+                </p>
+              </div>
+              <div class="hero-info text-center">
+                <h3 class="font-large font-bold">REMEMBER EVERYTHING</h3>
+                <p class="font-regular">
+                  Make notes more useful by adding text, images, audio, scans,
+                  PDFs, and documents.
+                </p>
+              </div>
+              <div class="hero-info text-center">
+                <h3 class="font-large font-bold">TURN TO-DO INTO DONE</h3>
+                <p class="font-regular">
+                  Bring your notes, tasks and schedules together to get things
+                  done more easily.
+                </p>
+              </div>
+              <div class="hero-info text-center">
+                <h3 class="font-large font-bold">FIND THINGS FAST</h3>
+                <p class="font-regular">
+                  Get what you need, when you need it with powerful, flexible
+                  search capabilities.
+                </p>
+              </div>
             </div>
-            <div class="hero-info text-center hidden">
-              <h3 class="font-large font-bold">REMEMBER EVERYTHING</h3>
-              <p class="font-regular">
-                Make notes more useful by adding text, images, audio, scans,
-                PDFs, and documents.
-              </p>
-            </div>
-            <div class="hero-info text-center hidden">
-              <h3 class="font-large font-bold">TURN TO-DO INTO DONE</h3>
-              <p class="font-regular">
-                Bring your notes, tasks and schedules together to get things
-                done more easily.
-              </p>
-            </div>
-            <div class="hero-info text-center hidden">
-              <h3 class="font-large font-bold">FIND THINGS FAST</h3>
-              <p class="font-regular">
-                Get what you need, when you need it with powerful, flexible
-                search capabilities.
-              </p>
-            </div>
+            <ul class="carousel-selector">
+              <li class="carousel-indicator active" data-indicator></li>
+              <li class="carousel-indicator" data-indicator></li>
+              <li class="carousel-indicator" data-indicator></li>
+              <li class="carousel-indicator" data-indicator></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -133,8 +142,8 @@
         <img src="./images/evernote.png" alt="Evernote logo" class="icon" />
       </footer>
     </div>
-    <div class="sidebar hidden">
-      <button class="btn btn-light">&#10005;</button>
+    <div class="sidebar hidden" data-modal>
+      <button class="btn btn-light" data-btn-close>&#10005;</button>
       <a href="#">WHY EVERNOTE</a>
       <a href="#">FEATURES</a>
       <a href="./pages/plans.html">PLANS</a>
