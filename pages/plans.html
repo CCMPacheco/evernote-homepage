@@ -242,13 +242,20 @@
         </div>
         <hr />
         <div>
-          <a
-            href="#"
-            class="help-container font-regular d-flex justify-content-between"
+          <button
+            class="btn btn-light font-regular d-flex justify-content-between language-btn"
+            data-language-btn
           >
-            <span class="font-bold">Choose a language: &#8628;</span>
-            <span>English (US)</span>
-          </a>
+            <span class="font-bold">Choose a language: &#8595;</span>
+            <span data-selected>English (US)</span>
+          </button>
+          <ul class="language-menu hidden" data-language-menu>
+            <li data-language-option>Deutsch</li>
+            <li data-language-option>English (US)</li>
+            <li data-language-option>Español</li>
+            <li data-language-option>Español (America Latina)</li>
+            <li data-language-option>Italiano</li>
+          </ul>
         </div>
         <hr />
       </div>
